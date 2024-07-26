@@ -1,3 +1,8 @@
+const redux = require("redux");
+
+const createStore = redux.createStore
+console.log(createStore);
+
 // let's create out first Action
 const CAKE_ORDER = 'CAKE_ORDER';
 
@@ -10,7 +15,7 @@ const CAKE_ORDER = 'CAKE_ORDER';
 
 // we can also create function which returns Action
 function orderCake(){
-    return
+    return object =
     {
         type: CAKE_ORDER,
         quantity: 1
@@ -38,3 +43,7 @@ const reducerFunc = (state = initialState, action) => {
             return state;
     }
 }
+
+// let's create store usign redux createStore method
+const store = createStore(reducerFunc);
+console.log(store.getState());
